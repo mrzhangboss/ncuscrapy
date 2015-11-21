@@ -6,7 +6,7 @@ base_dir=~/ncuscrapy
 git fetch
 git pull
 
-if [ ! -f "$base_dir/env/bin/activate" ]
+if [ ! -f $base_dir/env/bin/activate ]
 then
 	# cd $project_env
 	virtualenv $base_dir/env
