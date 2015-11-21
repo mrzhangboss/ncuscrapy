@@ -10,6 +10,8 @@ mail_postfix="163.com"  #发件箱的后缀
   
 def send_mail(sub,content,to_self=False):  #to_list：收件人；sub：主题；content：邮件内容
     if to_self:
+    	global mailto_list
+    	global mailto_list_my
         mailto_list=mailto_list_my
     me=mail_user+"@"+mail_postfix+">"   #这里的hello可以任意设置，收到信后，将按照设置显示
     msg = MIMEText(content,_subtype='html',_charset='utf-8')    #创建一个实例，这里设置为html格式邮件
