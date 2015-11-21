@@ -13,3 +13,5 @@ six==1.10.0
 SQLAlchemy==1.0.9
 w3lib==1.13.0
 wheel==0.24.0
+scrapy==1.0.3
+sqlalchemy==1.0.9
