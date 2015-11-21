@@ -1,0 +1,28 @@
+# coding=utf-8
+import chardet
+import urllib
+# content= urllib.urlopen('http://cgzx.ncu.edu.cn/zbgg/hwl/23049.htm').read()
+content= urllib.urlopen('http://yjsy.ncu.edu.cn/yjs_showmsg.asp?id=2770').read()
+print type(content)
+tt=[content]
+##print tt
+con_type=chardet.detect(content)['encoding']
+t=[ content.decode(con_type).encode('utf-8')]
+print t[0]
+# # content.decode(con_type).encode('utf-8')
+# print con_type
+
+##ttest=r'''
+##<table style="MARGIN-TOP: 4px" with="100%" cellspacing="2" cellpadding="2" width="890" align="center" border="0" class="border">
+##                   \t\t\t\t<tr valign="middle">      <td class="t003399" bgcolor="#eaeaea" align="center">                                                                \xb9\xd8\xd3\xda\xd7\x
+##f6\xba\xc32015\xc4\xea\xbd\xad\xce\xf7\xca\xa1\xc7\xe0\xc4\xea\xc2\xed\xbf\xcb\xcb\xbc\xd6\xf7\xd2\xe5\xd5\xdf\xc0\xed\xc2\xdb\xd1\xd0\xbe\xbf\xb4\xb4\xd0\xc2\xb9\xa4\xb3\xcc\xc9\xea\xb1\xa8\x
+##b9\xa4\xd7\xf7\xb5\xc4\xcd\xa8\xd6\xaa</td></tr>\t\t\t\t<tr valign="middle">      <td>                <p></p><p><img src="/admin/eWebEditor/sysimage/file/doc.gif" border="0"><a href="/admin/eW
+##ebEditor/UploadFile/20159301605101.doc" target="_blank">\xb9\xd8\xd3\xda\xd7\xf6\xba\xc32015\xc4\xea\xbd\xad\xce\xf7\xca\xa1\xc7\xe0\xc4\xea\xc2\xed\xbf\xcb\xcb\xbc\xd6\xf7\xd2\xe5\xd5\xdf\xc0
+##\xed\xc2\xdb\xd1\xd0\xbe\xbf\xb4\xb4\xd0\xc2\xb9\xa4\xb3\xcc\xc9\xea\xb1\xa8\xb9\xa4\xd7\xf7\xb5\xc4\xcd\xa8\xd6\xaa.doc</a></p>\r\n<p><img src="/admin/eWebEditor/sysimage/file/doc.gif" border
+##="0"><a href="/admin/eWebEditor/UploadFile/201593016049540.doc" target="_blank">\xb8\xbd\xbc\xfe\xd2\xbb\xa3\xba2015\xc4\xea\xbd\xad\xce\xf7\xca\xa1\xc7\xe0\xc4\xea\xc2\xed\xbf\xcb\xcb\xbc\xd6
+##\xf7\xd2\xe5\xd5\xdf\xc0\xed\xc2\xdb\xd1\xd0\xbe\xbf\xb4\xb4\xd0\xc2\xb9\xa4\xb3\xcc\xd1\xa1\xcc\xe2\xd6\xb8\xc4\xcf.doc</a></p>\r\n<p><img src="/admin/eWebEditor/sysimage/file/doc.gif" border
+##="0"><a href="/admin/eWebEditor/UploadFile/201593016055471.doc" target="_blank">\xb8\xbd\xbc\xfe\xb6\xfe\xa3\xba\xbd\xad\xce\xf7\xca\xa1\xc7\xe0\xc4\xea\xc2\xed\xbf\xcb\xcb\xbc\xd6\xf7\xd2\xe5
+##\xd5\xdf\xc0\xed\xc2\xdb\xd1\xd0\xbe\xbf\xb4\xb4\xd0\xc2\xb9\xa4\xb3\xcc\xc9\xea\xc7\xeb\xca\xe9.doc</a></p>\r\n<p>\xa0</p>\t\t</td></tr>\t</table>
+##'''
+##print type(ttest.decode('gbk'))
+##

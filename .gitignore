@@ -1,0 +1,6 @@
+!downl_file
+downl_file/
+testDb.db
+*.pyc
+!env
+env/
