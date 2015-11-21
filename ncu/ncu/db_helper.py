@@ -32,7 +32,7 @@ def count():
 title=u"<div><a href=\"%s\">详情链接</a></div>"
 message=u'today have no news'
 
-def get_send_content(num):
+def get_send_content(num,to_self=False):
 	content=[]
 	session=connection.init_db()
 	query=session.query(Article)
@@ -45,7 +45,9 @@ def get_send_content(num):
 		get_url=total_count-num
 	else:
 		get_all=total_count
-
+	if to_self:
+		get_all=total_count
+		get_url=None
 	for a in query.filter(Article.is_send==False).order_by(Article.id.desc()).limit(get_all).all():
 		box=[]
 		box.append(title%a.art_url)
@@ -76,7 +78,7 @@ def clear_email(is_clean=1):
 			print i.art_url+'\t'+'do not send'
 	
 def send_art_email(to_self=False):
-	content=get_send_content(10)
+	content=get_send_content(10,to_self)
 	clear_email()
 	print content
 	return send_email.send_mail(get_courrent_time(),content,to_self)
