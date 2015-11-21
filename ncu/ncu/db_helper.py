@@ -75,11 +75,11 @@ def clear_email(is_clean=1):
 		else:
 			print i.art_url+'\t'+'do not send'
 	
-def send_art_email():
+def send_art_email(to_self=False):
 	content=get_send_content(10)
 	clear_email()
 	print content
-	return send_email.send_mail(get_courrent_time(),content)
+	return send_email.send_mail(get_courrent_time(),content,to_self)
 
 # clear_email(0)
 # save_art('d','d','test')
