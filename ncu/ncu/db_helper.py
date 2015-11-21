@@ -39,6 +39,7 @@ def get_send_content(num,to_self=False):
 	get_all=num
 	get_url=None
 	total_count=count()
+	print 'send the email count:%d'%total_count
 	if total_count==0:
 		return message
 	if total_count > num :
@@ -79,7 +80,8 @@ def clear_email(is_clean=1):
 	
 def send_art_email(to_self=False):
 	content=get_send_content(10,to_self)
-	clear_email()
+	if to_self:
+		clear_email()
 	print content
 	return send_email.send_mail(get_courrent_time(),content,to_self)
 
