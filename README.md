@@ -10,4 +10,5 @@ scrapy
 	cd ~/ncuscrapy
 	git pull
 	bash run.sh
+
 	
