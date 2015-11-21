@@ -20,4 +20,4 @@ scrapy crawl activity
 scrapy crawl affiche
 scrapy crawl eduaffiche
 scrapy crawl news
-python {$base_dir}/ncu/ncu/send
+python {$base_dir}/ncu/ncu/send.py
