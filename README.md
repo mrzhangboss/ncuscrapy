@@ -22,4 +22,7 @@ scrapy
 	username=youruername
 	passwd=yourpassword
 
+
+###you can go to my blog to see more
+#### http://www.cnblogs.com/MrZhangLoveLearning/p/4985760.html
 	
