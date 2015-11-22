@@ -16,7 +16,8 @@ scrapy
 
 	touch passwd.ini
 
-###and add this
+###and add this in passwd.ini
+
 	[163]
 	username=youruername
 	passwd=yourpassword
