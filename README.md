@@ -11,4 +11,14 @@ scrapy
 	git pull
 	bash run.sh
 
+
+## in ~/ncuscrapy/ncu/ncu/ create a file
+
+	touch passwd.ini
+
+###and add this
+	[163]
+	username=youruername
+	passwd=yourpassword
+
 	

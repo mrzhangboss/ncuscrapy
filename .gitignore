@@ -4,3 +4,4 @@ testDb.db
 *.pyc
 !env
 env/
+*.ini

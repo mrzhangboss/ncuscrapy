@@ -3,6 +3,7 @@ import chardet
 
 enable_coding=['UTF-8','GBK','GB2312']
 # return a  fixed unicode code
+# beause the response_encoding may be wrong
 def encode_content(resonse_encoding,content,response_body):
 	if resonse_encoding.upper() in enable_coding:
 		return content
